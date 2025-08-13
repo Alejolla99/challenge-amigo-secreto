@@ -1,5 +1,28 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-//Inicia declarando una variable de tipo array, que almacenará los nombres de los amigos ingresados. 
-let lista_de_nombres =  amigos[0];
+//variables 
+let registrodeamigos = []; 
+let lista_de_amigos = "";
+ //agrega nombre y verifica si se inceta vacio
+function agregarAmigo() {
+   lista_de_amigos = document.getElementById(`amigo`).value;
+    
+    if (lista_de_amigos !== ``) {
+        
+        registrodeamigos.push(lista_de_amigos);
+        document.getElementById(`amigo`).value = "";
 
-console.log(lista_de_nombres);
+    } else{
+        alert (`Error: Por favor, inserte un nombre`);
+    }
+     console.log (registrodeamigos);
+
+    return; 
+}
+
+
+
+
+
+ 
+
+
+

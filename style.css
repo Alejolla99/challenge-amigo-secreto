@@ -51,6 +51,14 @@ body {
     padding: 20px;
     width: 100%;
 }
+.lista__de__amigos{
+ flex-direction:column;
+ font-family: "Merriweather", serif;
+ border: 5px dashed  #4B69FD;
+ border-right: none;
+ border-radius: 25px;
+ 
+ }
 
 /* Títulos */
 .main-title {

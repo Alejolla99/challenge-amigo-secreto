@@ -1,38 +1,53 @@
 //variables 
 let registrodeamigos = []; 
-let lista_de_amigos = "";
+
  //agrega nombre y verifica si se inceta vacio
 function agregarAmigo() {
-   lista_de_amigos = document.getElementById(`amigo`).value;
+   let nombre = document.getElementById(`amigo`).value;
     
-    if (lista_de_amigos !== ``) {
-        
-        registrodeamigos.push(lista_de_amigos);
+    if (nombre !== "") {     
+        registrodeamigos.push(nombre);
+        //limpiar el imput
+
         document.getElementById(`amigo`).value = "";
-        
-        lista_del_sorteo();
+
+        mostrar__lista();
 
     } else{
-        alert (`Error: Por favor, inserte un nombre`);
+        alert (`Error: Por favor, inserte un nombre.`);
     }
+
      console.log (registrodeamigos);
 
     return; 
 }
-function lista_del_sorteo (){
-    const lista = document.getElementById("lista_del_sorteo");
-    lista.innerHTML = "";
+function mostrar__lista(){
+    const lista = document.getElementById("lista_amigos");
+    //limpiar la lista
+    lista.innerHTML = ""; 
         for (let i = 0; i < registrodeamigos.length; i++){
-            const nueva_lista = document.createElement("li");
-            nueva_lista.textContent = registrodeamigos[i];
-            lista.appendChild(nueva_lista);
+            const nuevo_nombre = document.createElement("li");
+            nuevo_nombre.textContent = registrodeamigos[i];
+            lista.appendChild(nuevo_nombre);
         }
 }
 
+ function sortearAmigo(){
+    // validar si hay un amigo en lista
+    if (registrodeamigos.length === 0){
+        alert("No, hay amigos disponibles para sortear. Ingrese nombres primero");
+        return;
+    }
+    let indice = Math.floor(Math.random() * registrodeamigos.length);
+    let nombre__elegido = registrodeamigos[indice];
 
+    //mostrar en pantalla
+    document.getElementById("resultado").textContent = "🎁 tu amigo selecionado es: " + nombre__elegido;
 
+    console.log("Amigo seleccionado: " + nombre__elegido);
 
- 
+    return nombre__elegido;
+}
 
 
 

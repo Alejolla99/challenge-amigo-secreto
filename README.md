@@ -1,9 +1,8 @@
-<h1>Sobre el Desafio</h1>
+<h1>Introducción</h1>
 
-<p>Amigo secreto</p>
+<p>¡¡¡Bienbenido a el juego!!!</p>
 
-En este desafío, desarrollarás una aplicación que permita a los usuarios ingresar nombres de amigos en una lista para luego realizar 
-un sorteo aleatorio y determinar quién es el "amigo secreto".
+¿Listo para descubrir a tu Amigo Secreto? 🕵️‍♂️
+Con esta aplicación solo tienes que escribir los nombres de tus amigos, familia o compañeros, y dejar que la suerte decida. El sistema hará un sorteo mágico ✨ totalmente al azar para revelar quién es el misterioso amigo secreto.
 
-El usuario deberá agregar nombres mediante un campo de texto y un botón "Adicionar". Los nombres ingresados se mostrarán en una lista visible 
-en la página, y al finalizar, un botón "Sortear Amigo" seleccionará uno de los nombres de forma aleatoria, mostrando el resultado en pantalla.
+¡Prepárate, porque la intriga, las risas y las sorpresas están garantizadas! 🎁

@@ -10,6 +10,8 @@ function agregarAmigo() {
         //limpiar el imput
 
         document.getElementById(`amigo`).value = "";
+        document.getElementById(`resultado`).innerHTML = "";
+        document.getElementById(`termina_la_lista`).innerHTML = "";
 
         mostrar__lista();
 
@@ -39,12 +41,26 @@ function mostrar__lista(){
         return;
     }
     let indice = Math.floor(Math.random() * registrodeamigos.length);
-    let nombre__elegido = registrodeamigos[indice];
+    var nombre__elegido = registrodeamigos[indice];
 
     //mostrar en pantalla
     document.getElementById("resultado").textContent = "🎁 tu amigo selecionado es: " + nombre__elegido;
 
     console.log("Amigo seleccionado: " + nombre__elegido);
+
+    //elimina al amigo sorteado de la lista
+
+    registrodeamigos.splice(indice, 1);
+
+    mostrar__lista();
+
+    //si despues de eliminar ya no quedan, mostrar mensaje final
+    if (registrodeamigos.length === 0){
+        
+        document.getElementById("resultado").textContent = "🎁 tu amigo selecionado es: " + nombre__elegido;
+
+        document.getElementById("termina_la_lista").textContent = "¡¡¡ Todos los amigos ya fueron sorteados !!!"
+    }
 
     return nombre__elegido;
 }

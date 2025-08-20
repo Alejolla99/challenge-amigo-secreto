@@ -3,11 +3,23 @@ let registrodeamigos = [];
 
  //agrega nombre y verifica si se inceta vacio
 function agregarAmigo() {
-   let nombre = document.getElementById(`amigo`).value;
+   let nombre = document.getElementById(`amigo`).value.trim().toLowerCase();
     
-    if (nombre !== "") {     
+    if (nombre !== "") {   
+
+        //verificar duplicados
+
+        if (registrodeamigos.includes(nombre)){
+            alert("Error, Ese nombre ya está en la lista");
+
+            document.getElementById("amigo").value = "";
+
+            return;
+        }
+        
         registrodeamigos.push(nombre);
-        //limpiar el imput
+
+        //limpiar el imput y mensajes previos
 
         document.getElementById(`amigo`).value = "";
         document.getElementById(`resultado`).innerHTML = "";

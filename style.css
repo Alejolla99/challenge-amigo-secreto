@@ -1,10 +1,10 @@
 :root {
     --color-primary: #FF5E78;
-    --color-secondary: #FFF3B0;
+    --color-secondary: #FFF9E6;
     --color-tertiary: #FF8383;
-    --color-button: #FF8383;
+    --color-button: #FF6F91;
     --color-button-hover: #E14B65;
-    --color-text: #2C2C2C;
+    --color-text: #242323;
     --color-white: #FFFFFF;
 }
 
@@ -128,16 +128,31 @@ button {
 /* Listas */
 ul {
     list-style-type: none;
-    color: var(--color-text);
+    padding: 0;
+    color: var(--color-tertiary);
     font-family: "Inter", sans-serif;
     font-size: 18px;
-    margin: 20px 0;
+    margin: 0 0 20px 0;
+}
+.lista_de_nombres{
+    display: inline-block;
+    background: #ffe5ec;
+    color: #333;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    font-family: "Merriweather", serif;
+    color:#FF6F91;
+
 }
 
 .result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
+    margin-top: 20px;
+    color: #FF5E78;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
